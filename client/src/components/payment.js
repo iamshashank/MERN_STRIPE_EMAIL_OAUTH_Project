@@ -12,7 +12,24 @@ class Payment extends React.Component {
 				token={token => this.props.handleToken(token)}
 				stripeKey={process.env.REACT_APP_STRIPE}
 			>
-				<button className="btn">GET CREDITS</button>
+				<button className="btn">
+					ADD CREDITS
+					<span
+						className="new badge black"
+						data-badge-caption=""
+						style={{
+							display: "inline-block",
+							width: "auto",
+							height: "100%",
+							borderRadius: "0",
+							fontSize: "1.5rem",
+							fontWeight: "400",
+							padding: "7px"
+						}}
+					>
+						34
+					</span>
+				</button>
 			</StripeCheckout>
 		);
 	}
