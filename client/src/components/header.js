@@ -16,7 +16,7 @@ class Header extends React.Component {
       default:
         return [
           <li key="1">
-            <Payment />
+            <Payment credits={this.props.auth.credits} />
           </li>,
           <li key="2">
             <a href="/api/logout">Logout</a>
@@ -26,7 +26,11 @@ class Header extends React.Component {
   }
   renderLogo() {
     return this.props.auth ? (
-      <Link className="brand-logo left" to="/survey">
+      <Link
+        className="brand-logo left"
+        style={{ padding: "0 15px" }}
+        to="/survey"
+      >
         Emaily
       </Link>
     ) : (

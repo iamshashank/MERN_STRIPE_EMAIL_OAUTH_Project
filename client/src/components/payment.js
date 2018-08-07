@@ -27,7 +27,7 @@ class Payment extends React.Component {
 							padding: "7px"
 						}}
 					>
-						34
+						{this.props.credits}
 					</span>
 				</button>
 			</StripeCheckout>
